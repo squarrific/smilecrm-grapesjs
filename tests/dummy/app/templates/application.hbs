@@ -1,5 +1,14 @@
 {{page-title "Dummy"}}
-
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="d-flex flex-row vh-100">
+  <div class="w-25 bg-light">
+    <Tester @message="test">this is block</Tester>
+  </div>
+  <div class="flex-fill">
+    <Grapesjs
+      @page={{@model}}
+      @plugins={{array "grapesjs-preset-webpage"}}
+    >
+      loading
+    </Grapesjs>
+  </div>
+</div>
